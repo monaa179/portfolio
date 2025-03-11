@@ -1,0 +1,478 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    transition: background-color 0.5s ease-in-out;
+}
+
+/* Apparition progressive */
+@keyframes fadeInDefault {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate {
+    animation: fadeInDefault 1s ease-out forwards;
+}
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/background.jpg') center/cover no-repeat;
+    background-color: #1a1a1a; /* Fond de secours */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+.hero-section h1 {
+    font-weight: 700;
+    color: white;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: slideUp 1s ease-in-out;
+}
+.hero-section p {
+    font-size: 1.3rem;
+    color: #ddd;
+    max-width: 600px;
+    margin: 20px auto;
+    animation: fadeIn 2s ease-in-out;
+}
+
+
+/* Navbar */
+.offcanvas {
+    width: 250px; /* Largeur du menu */
+}
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+.navbar {
+    transition: background-color 0.3s ease-in-out, backdrop-filter 0.3s;
+    backdrop-filter: blur(10px);
+}
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.85) !important;
+}
+
+/* Animation au survol des cartes */
+.card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 10px;
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+.skill-logo {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+.skill-logo.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Section Compétences */
+#skills {
+    padding: 80px 0;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+/* Titre */
+#skills h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #222;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Conteneur des compétences */
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Carte des compétences */
+.skill-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Effet au survol */
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Icônes des compétences */
+.skill-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Effet de zoom au survol */
+.skill-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Nom des compétences */
+.skill-card p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+/* Animation progressive des icônes */
+.skill-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.skill-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Section Projets */
+#projects {
+    padding-top: 80px;
+}
+
+#projects h2 {
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+#projects h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #007bff;
+    margin: 8px auto;
+    border-radius: 5px;
+}
+
+/* Style des sous-titres */
+#projects h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 40px;
+    color: #333;
+    position: relative;
+}
+
+#projects h3::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #007bff;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Effet au survol */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Style du texte dans les cartes */
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Animation de l'apparition des projets */
+.animated {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.animated.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ====== SECTION CONTACT ====== */
+#contact {
+    padding-top: 80px;
+    background: linear-gradient(135deg, #f8f9fa, #eaeaea); /* Gris clair et beige */
+    color: #333;
+    border-radius: 15px;
+    padding: 60px 20px;
+    margin-top: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    position: relative;
+    color: #2c3e50; /* Gris foncé élégant */
+}
+
+#contact h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: #16a085; /* Vert foncé */
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+/* ====== FORMULAIRE ====== */
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+form:hover {
+    transform: translateY(-5px);
+}
+
+/* Champs du formulaire */
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #16a085; /* Vert foncé */
+    box-shadow: 0 0 8px rgba(22, 160, 133, 0.5);
+}
+
+/* Groupe d'entrée avec icônes */
+.input-group-text {
+    background: #16a085; /* Vert foncé */
+    color: white;
+    border: none;
+    border-radius: 8px 0 0 8px;
+}
+
+/* Bouton d'envoi */
+.btn-primary {
+    background: #16a085; /* Vert foncé */
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background: #13856d; /* Légèrement plus foncé au survol */
+    transform: scale(1.05);
+}
+
+/* Ajout d'une animation au bouton */
+.btn-primary i {
+    margin-left: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-primary:hover i {
+    transform: translateX(5px);
+}
+
+/* Carrousel */
+
+
+.visually-hidden {
+    position: relative !important;
+    width: auto !important;
+    height: auto !important;
+    clip: auto !important;
+    overflow: visible !important;
+}
+
+#projects-carousel {
+    background: #f8f9fa;
+    padding: 50px 0;
+    border-radius: 10px;
+}
+
+.carousel-item img {
+    height: 450px; /* Ajuste selon tes images */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 8px;
+}
+.carousel-control-prev span,
+.carousel-control-next span {
+    display: block; /* Affiche le texte */
+    color: white;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* ====== SECTION DÉTAIL DU PROJET ====== */
+#project-detail {
+    padding-top: 100px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 60px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Titre du projet */
+#project-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+}
+
+#project-title::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: #007bff;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+/* Description */
+#project-description {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.6;
+}
+
+/* Technologies utilisées */
+#project-tech {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1.1rem;
+}
+
+/* Effet de fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Conteneur de la vidéo */
+#video-container {
+    max-width: 600px;  /* Réduit la largeur maximale */
+    margin: 20px auto; /* Centre le conteneur */
+    padding: 15px;
+    background: #f8f9fa; /* Fond léger */
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Titre de la vidéo */
+#video-container h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Style de la vidéo */
+#project-video {
+    width: 80%; /* Réduit la taille de la vidéo */
+    max-width: 500px; /* Taille maximale */
+    border-radius: 8px;
+    outline: none;
+}
+
+/* Ajustement responsive */
+@media (max-width: 768px) {
+    #video-container {
+        max-width: 90%; /* S'adapte mieux sur mobile */
+        padding: 10px;
+    }
+
+    #project-video {
+        width: 100%; /* Vidéo plus grande sur petits écrans */
+    }
+
+    #video-container h3 {
+        font-size: 1.3rem;
+    }
+}
+.btn-primary {
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    transform: scale(1.1);
+}

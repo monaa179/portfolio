@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mona Pintacorona</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+   <!-- Navbar Bootstrap Offcanvas -->
+<nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Mona Pintacorona</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+
+<!-- Offcanvas Sidebar (À droite) -->
+<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="competences.html">Compétences</a></li>
+            <li class="nav-item"><a class="nav-link" href="projets.html">Projets</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+        <div class="container">
+            <a class="navbar-brand" href="#">Mona Pintacorona</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="competences.html">Compétences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projets.html">Projets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-center text-white d-flex align-items-center">
+        <div class="container">
+            <h1 class="display-4 animate">Bienvenue sur mon portfolio</h1>
+            <p class="lead animate">Développeuse junior | Passionnée par le web, la cybersécurité et l'IA</p>
+            <p class="hero-description animate">Étudiante en première année de licence en informatique, je recherche une alternance dès septembre 2025 pour développer mes compétences. Passionnée, rigoureuse et persévérante, j’ai travaillé sur divers projets web, mobile et systèmes, ce qui m’a permis d’acquérir une solide capacité d’adaptation et un esprit analytique. Dotée d’une grande curiosité et d’un bon esprit d’équipe, je souhaite apprendre et apporter ma contribution au sein d’une entreprise dynamique et innovante.</p>
+        </div>
+        
+    </header>
+
+        <!-- Carrousel des Projets -->
+        <section id="projects-carousel" class="container py-5">
+            <div class="d-flex justify-content-center mt-4">
+                <a href="projets.html" class="btn btn-primary btn-lg">Mes Réalisations</a>
+            </div>
+            <div id="carouselProjets" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Projet 1 -->
+                    <div class="carousel-item active">
+                        <a href="http://127.0.0.1:5500/portfolio/projet-detail.html?projet=explorateur-films">
+                            <img src="images/projet1.png" class="d-block w-100" alt="Projet 1">
+                        </a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Explorateur de films</h5>
+                            <p>Application mobile permettant de parcourir un catalogue de films.</p>
+                        </div>
+                    </div>
+                    <!-- Projet 2 -->
+                    <div class="carousel-item">
+                        <a href="http://127.0.0.1:5500/portfolio/projet-detail.html?projet=gestionnaire-taches">
+                            <img src="images/projet2.png" class="d-block w-100" alt="Projet 2">
+                        </a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Gestionnaire de tâches</h5>
+                            <p>Application permettant de suivre et gérer les tâches en équipe.</p>
+                        </div>
+                    </div>
+                    <!-- Projet 3 -->
+                    <div class="carousel-item">
+                        <a href="http://127.0.0.1:5500/portfolio/projet-detail.html?projet=jeu-vr">
+                            <img src="images/projet3.png" class="d-block w-100" alt="Projet 3">
+                        </a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Jeu d’horreur en VR</h5>
+                            <p>Expérience immersive en réalité virtuelle.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Boutons de navigation -->
+                <!-- Boutons de navigation -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjets" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span>Précédent</span> <!-- Texte visible -->
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProjets" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span>Suivant</span> <!-- Texte visible -->
+                </button>
+            </div>
+        </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-dark text-white py-5">
+        <div class="container text-center">
+            <h2>Contact</h2>
+            <form>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Votre nom" required>
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Votre email" required>
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" placeholder="Votre message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <img id="qr-code" src="" alt="QR Code de mon Portfolio">
+
+<script>
+    const portfolioURL = "http://127.0.0.1:5500/portfolio/index.html"; // Remplace avec ton lien
+    const qrCodeImg = document.getElementById("qr-code");
+    qrCodeImg.src = `https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=${encodeURIComponent(portfolioURL)}`;
+</script>
+</body>
+</html>
