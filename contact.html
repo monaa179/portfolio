@@ -41,33 +41,34 @@
         <p class="text-center">Remplissez le formulaire ci-dessous et je vous répondrai rapidement !</p>
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <form id="contactForm">
+                <form id="contactForm" action="https://formspree.io/f/xpwpwanp" method="POST">
                     <div class="mb-3">
                         <label for="name" class="form-label">Nom</label>
                         <div class="input-group">
                             <span class="input-group-text"><i class="bi bi-person"></i></span>
-                            <input type="text" class="form-control" id="name" placeholder="Votre nom" required>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom" required>
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
                         <div class="input-group">
                             <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                            <input type="email" class="form-control" id="email" placeholder="Votre email" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Votre email" required>
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="subject" class="form-label">Sujet</label>
                         <div class="input-group">
                             <span class="input-group-text"><i class="bi bi-chat-dots"></i></span>
-                            <input type="text" class="form-control" id="subject" placeholder="Sujet du message" required>
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Sujet du message" required>
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" rows="5" placeholder="Votre message" required></textarea>
+                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary w-100">Envoyer <i class="bi bi-send"></i></button>
+                </form>
                 </form>
             </div>
         </div>
