@@ -1,4 +1,133 @@
-/* Import Google Fonts */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin-top: 80px; /* Pour ne pas cacher le contenu par la navbar */
+}
+
+/* Style de la navbar */
+.navbar {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Style des sections */
+section {
+    padding: 60px 0;
+}
+
+/* Style des cards */
+.project-card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+.project-card img {
+    border-radius: 12px 12px 0 0;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.project-card h5 {
+    font-size: 1.2rem;
+    margin: 15px 0 10px;
+    color: #fff;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.project-card .card-body {
+    padding: 20px;
+}
+
+/* Style des titres */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #ffffff;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-top: 40px;
+    color: #cccccc;
+}body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin-top: 80px; /* Pour ne pas cacher le contenu par la navbar */
+}
+
+/* Style de la navbar */
+.navbar {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style des sections */
+section {
+    padding: 60px 0;
+}
+
+/* Style des cards */
+.project-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    border-radius: 12px 12px 0 0;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.project-card h5 {
+    font-size: 1.2rem;
+    margin: 15px 0 10px;
+    color: #333;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.project-card .card-body {
+    padding: 20px;
+}
+
+/* Style des titres */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #222;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-top: 40px;
+    color: #444;
+}/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 /* Global Styles */
@@ -103,7 +232,7 @@ body {
 /* Section Compétences */
 #skills {
     padding: 80px 0;
-    background: #f8f9fa;
+    background: transparent; /* Laisse apparaître le fond sombre global */
     text-align: center;
 }
 
@@ -111,8 +240,8 @@ body {
 #skills h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 50px;
-    color: #222;
+    margin-bottom: 150px;
+    color: #fff; /* Texte blanc pour contraster avec le fond sombre */
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -127,13 +256,16 @@ body {
 
 /* Carte des compétences */
 .skill-card {
-    background: white;
-    border-radius: 12px;
-    padding: 20px;
-    width: 150px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    background: #2c2c2c !important; /* Gris foncé */
+    color: #fff !important; /* Texte blanc */
+    border-radius: 12px !important;
+    padding: 20px !important;
+    width: 150px !important;
+    text-align: center !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5) !important; /* Ombre subtile */
+    overflow: hidden !important;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out !important;
 }
 
 /* Effet au survol */
@@ -340,44 +472,7 @@ form:hover {
     transform: translateX(5px);
 }
 
-/* Carrousel */
 
-
-.visually-hidden {
-    position: relative !important;
-    width: auto !important;
-    height: auto !important;
-    clip: auto !important;
-    overflow: visible !important;
-}
-
-#projects-carousel {
-    background: #f8f9fa;
-    padding: 50px 0;
-    border-radius: 10px;
-}
-
-.carousel-item img {
-    height: 450px; /* Ajuste selon tes images */
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.carousel-caption {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 15px;
-    border-radius: 8px;
-}
-.carousel-control-prev span,
-.carousel-control-next span {
-    display: block; /* Affiche le texte */
-    color: white;
-    font-size: 16px;
-    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin-top: 10px;
-}
 
 /* ====== SECTION DÉTAIL DU PROJET ====== */
 #project-detail {
@@ -476,4 +571,240 @@ form:hover {
 
 .btn-primary:hover {
     transform: scale(1.1);
+}
+
+/* Style du conteneur de filtre */
+.mb-3 {
+    display: flex;
+    flex-direction: column; /* Organisation verticale */
+    align-items: center; /* Centre horizontalement */
+    margin-top: 20px;
+    margin-bottom: 40px; /* Espacement supplémentaire */
+}
+
+/* Label du filtre */
+.mb-3 label {
+    font-size: 1.1rem; /* Texte légèrement plus grand */
+    font-weight: 500; /* Texte légèrement plus épais */
+    color: #00bcd4; /* Couleur bleu contrastée */
+    margin-bottom: 10px; /* Espace sous le label */
+    text-transform: uppercase; /* Texte en majuscules */
+}
+
+/* Sélecteur */
+.form-select {
+    width: 300px; /* Largeur fixe */
+    padding: 10px 15px; /* Espacement interne */
+    font-size: 1rem; /* Taille de police agréable */
+    font-weight: 400; /* Poids standard */
+    border: 1px solid #333; /* Bordure discrète */
+    border-radius: 8px; /* Coins arrondis */
+    background-color: #1e1e1e; /* Fond sombre pour correspondre au thème */
+    color: #ffffff; /* Texte en blanc */
+    outline: none; /* Supprime les bordures bleues au focus */
+    transition: all 0.3s ease; /* Animation fluide */
+}
+
+/* Sélecteur en focus ou hover */
+.form-select:focus,
+.form-select:hover {
+    border-color: #00bcd4; /* Bordure bleue au survol ou focus */
+    background-color: #252525; /* Fond légèrement plus clair */
+    color: #ffffff; /* Assure une bonne lisibilité */
+}
+
+/* Options du sélecteur */
+.form-select option {
+    background-color: #1e1e1e; /* Fond sombre pour les options */
+    color: #ffffff; /* Texte en blanc */
+}
+
+/* Section compétences générales */
+#skills {
+    margin-top: 70px; /* Ajustez selon vos besoins */
+}
+
+/* Sous-titre Langages de programmation */
+#skills h3 {
+    margin-top: -50px; /* Réduit l'espacement entre le titre et la section précédente */
+    font-size: 1.5rem;
+    color: #007bff; /* Optionnel : une couleur différente pour le titre */
+    font-weight: bold;
+}
+
+/* Cards des langages */
+.skill-container {
+    margin-top: 20px; /* Gère l'espacement entre le titre "Langages de programmation" et les icônes */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+/* Cartes des langages : hover et alignement */
+.skill-card img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.skill-card p {
+    font-size: 1rem;
+    color: #6c757d; /* Gris neutre */
+    margin-top: 5px;
+}
+
+.skill-card:hover img {
+    transform: scale(1.1);
+}
+
+.skill-card:hover p {
+    color: #007bff; /* Met en avant au survol */
+}
+
+/* Section Outils */
+#tools {
+    margin-top: 50px; /* Ajustez selon vos besoins pour rapprocher cette section */
+}
+
+/* Titre Outils */
+#tools h2 {
+    font-size: 1.8rem;
+    color: #007bff; /* Optionnel : une couleur d'accentuation */
+    font-weight: bold;
+    margin-bottom: 20px; /* Espacement avec les icônes */
+}
+
+/* Container des outils */
+.tool-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+/* Cartes des outils : style et hover */
+.tool-container .skill-card img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.tool-container .skill-card p {
+    font-size: 1rem;
+    color: #6c757d; /* Gris neutre */
+    margin-top: 5px;
+}
+
+.tool-container .skill-card:hover img {
+    transform: scale(1.1); /* Animation de zoom */
+}
+
+.tool-container .skill-card:hover p {
+    color: #007bff; /* Accentuation au survol */
+}
+/* Section Outils */
+.scrolling-tools {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.tool-track {
+    display: flex;
+    gap: 30px;
+    animation: scroll 10s linear infinite;
+    will-change: transform; /* Amélioration des performances */
+}
+
+.tool-card {
+    flex: 0 0 auto;
+    text-align: center;
+    width: 120px;
+}
+
+.tool-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.tool-card p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.tool-card:hover img {
+    transform: scale(1.2); /* Agrandissement au survol */
+}
+
+.tool-card:hover p {
+    color: #007bff; /* Changement de couleur au survol */
+}
+
+/* Animation de défilement */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Conteneur de la carte */
+.skill-card {
+    position: relative; /* Important pour positionner l'effet */
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Effet lampe torche */
+.skill-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px; /* Taille de la lampe */
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 60%);
+    border-radius: 50%;
+    pointer-events: none; /* Empêche de capturer les clics */
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Masqué par défaut */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Lorsque la souris est sur la carte */
+.skill-card:hover:before {
+    opacity: 1; /* La lumière devient visible */
+}
+
+.skill-card:before {
+    content: '';
+    position: absolute;
+    top: var(--mouse-y, -9999px); /* Position dynamique de la lumière */
+    left: var(--mouse-x, -9999px); /* Position dynamique de la lumière */
+    width: 150px; /* Réduit la taille de la lumière */
+    height: 150px; /* Réduit la taille de la lumière */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 50%); /* Réduit l'opacité et adoucit le gradient */
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out; /* Transition plus douce */
+}
+
+.skill-card:hover:before {
+    opacity: 0.7; /* Lumière plus douce */
 }

@@ -8,141 +8,400 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-   <!-- Navbar Bootstrap Offcanvas -->
-<nav class="navbar navbar-dark bg-dark fixed-top">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Mona Pintacorona</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
-</nav>
-
-<!-- Offcanvas Sidebar (À droite) -->
-<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title">Menu</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-            <li class="nav-item"><a class="nav-link" href="competences.html">Compétences</a></li>
-            <li class="nav-item"><a class="nav-link" href="projets.html">Projets</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-    </div>
-</div>
-</div>
-        <div class="container">
-            <a class="navbar-brand" href="#">Mona Pintacorona</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <!-- Navbar Bootstrap Offcanvas -->
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Mona Pintacorona</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="competences.html">Compétences</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projets.html">Projets</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero-section text-center text-white d-flex align-items-center">
-        <div class="container">
-            <p class="lead animate">Développeuse junior | Passionnée par le web, la cybersécurité et l'IA</p>
-            <p class="hero-description animate">Étudiante en première année de licence en informatique, je recherche une alternance dès septembre 2025 pour développer mes compétences. Passionnée, rigoureuse et persévérante, j’ai travaillé sur divers projets web, mobile et systèmes, ce qui m’a permis d’acquérir une solide capacité d’adaptation et un esprit analytique. Dotée d’une grande curiosité et d’un bon esprit d’équipe, je souhaite apprendre et apporter ma contribution au sein d’une entreprise dynamique et innovante.</p>
+    <!-- Offcanvas Sidebar -->
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
         </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="competences.html">Compétences</a></li>
+                <li class="nav-item"><a class="nav-link" href="projets.html">Projets</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+   <!-- Hero Section -->
+<header class="hero-section text-center text-white d-flex align-items-center" style="background: #333; height: 80vh;">
+    <div class="container">
+        <h1>Portfolio</h1>
+        <p class="lead">Développeuse junior | En recherche d'alternnace</p>
+        <p>Étudiante en informatique, je suis activement à la recherche d’une alternance pour septembre 2025. Passionnée par le web, la cybersécurité et l’IA, je veux relever des défis.</p>
         
-    </header>
+        <!-- Logos for GitHub and LinkedIn -->
+        <div class="mt-4 d-flex justify-content-center">
+            <a href="https://github.com/monaa179" target="_blank" class="mx-3">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/github.svg" alt="GitHub" style="width: 50px; height: 50px; filter: invert(1);">
+            </a>
+            <a href="https://www.linkedin.com/in/mona-pintacorona-828678354" target="_blank" class="mx-3">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="width: 50px; height: 50px; filter: invert(1);">
+            </a>
+        </div>
+    </div>
+</header>
 
-        <!-- Carrousel des Projets -->
-        <section id="projects-carousel" class="container py-5">
-            <div class="d-flex justify-content-center mt-4 mb-4">
-                <a href="projets.html" class="btn btn-primary btn-lg">Mes Réalisations</a>
-            </div>
-            <div id="carouselProjets" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <!-- Projet 1 -->
-                    <div class="carousel-item active">
-                        <a href="http://127.0.0.1:5500/portfolio/projet-detail.html?projet=explorateur-films">
-                            <img src="images/projet1.png" class="d-block w-100" alt="Projet 1">
-                        </a>
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Explorateur de films</h5>
-                            <p>Application mobile permettant de parcourir un catalogue de films.</p>
-                        </div>
-                    </div>
-                    <!-- Projet 2 -->
-                    <div class="carousel-item">
-                        <a href="http://127.0.0.1:5500/portfolio/projet-detail.html?projet=gestionnaire-taches">
-                            <img src="images/projet2.png" class="d-block w-100" alt="Projet 2">
-                        </a>
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Gestionnaire de tâches</h5>
-                            <p>Application permettant de suivre et gérer les tâches en équipe.</p>
-                        </div>
-                    </div>
-                    <!-- Projet 3 -->
-                    <div class="carousel-item">
-                        <a href="http://127.0.0.1:5500/portfolio/projet-detail.html?projet=jeu-vr">
-                            <img src="images/projet3.png" class="d-block w-100" alt="Projet 3">
-                        </a>
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Jeu d’horreur en VR</h5>
-                            <p>Expérience immersive en réalité virtuelle.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Boutons de navigation -->
-                <!-- Boutons de navigation -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjets" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span>Précédent</span> <!-- Texte visible -->
-                </button>
 
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselProjets" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span>Suivant</span> <!-- Texte visible -->
-                </button>
-            </div>
-        </section>
-
-   
-
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-
-<script>
-    const portfolioURL = "http://127.0.0.1:5500/portfolio/index.html"; // Remplace avec ton lien
-    const qrCodeImg = document.getElementById("qr-code");
-    qrCodeImg.src = `https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=${encodeURIComponent(portfolioURL)}`;
-</script>
-<script>
-    document.getElementById("contactForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // Empêche le rechargement immédiat de la page
-        var form = this;
-
-        fetch(form.action, {
-            method: form.method,
-            body: new FormData(form),
-            headers: { 'Accept': 'application/json' }
-        }).then(response => {
-            if (response.ok) {
-                alert("Message envoyé avec succès !");
-                form.reset(); // Réinitialise le formulaire
-            } else {
-                alert("Une erreur est survenue. Réessayez plus tard.");
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio - Mona Pintacorona</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+        
+        <style>
+            /* Configuration générale */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
             }
-        }).catch(error => {
-            alert("Une erreur s'est produite.");
-        });
+    
+            body {
+                font-family: 'Inter', sans-serif;
+                background-color: #121212;
+                color: #ffffff;
+                overflow-x: hidden;
+            }
+    
+            h1, h2 {
+                text-align: center;
+                font-weight: 700;
+                margin-bottom: 30px;
+            }
+    
+            h1 {
+                font-size: 3rem;
+                margin-top: 50px;
+            }
+    
+            h2 {
+                font-size: 2rem;
+                color: #bbbbbb;
+                margin-top: 40px; /* Ajoute de l'espace au-dessus du titre */
+            }
+    
+            /* Section principale */
+            .projects {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+                max-width: 1200px;
+                margin: 50px auto;
+                padding: 0 20px;
+            }
+    
+            .card {
+                background-color: #1e1e1e;
+                border-radius: 15px;
+                overflow: visible;
+                box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
+                cursor: pointer;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+    
+            .card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0px 8px 30px rgba(255, 255, 255, 0.1);
+            }
+    
+            .card img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+    
+            .card-content {
+                padding: 20px;
+            }
+    
+            .card-title {
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: #ffffff;
+                margin-bottom: 10px;
+            }
+    
+            .card-description {
+                font-size: 1rem; /* Taille lisible */
+                color: #bbbbbb; /* Gris plus foncé pour éviter une luminosité excessive */
+                line-height: 1.6; /* Espacement entre les lignes */
+                margin-bottom: 15px; /* Ajout d'espace sous le texte */
+            }
+    
+            /* Animation du texte */
+            .card:hover .card-title {
+                color: #00bcd4;
+                transition: color 0.3s ease;
+            }
+    
+            /* Footer */
+            footer {
+                margin-top: 50px;
+                text-align: center;
+                font-size: 0.9rem;
+                color: #888888;
+                padding: 20px 0;
+                border-top: 1px solid #333333;
+            }
+    
+            footer a {
+                color: #00bcd4;
+                text-decoration: none;
+            }
+    
+            footer a:hover {
+                text-decoration: underline;
+            }
+            .card-text {
+                color: #e0e0e0; /* Gris clair mais moins agressif que le blanc pur */
+            }
+
+            .card-text:last-child {
+                margin-bottom: 0;
+                color: #cfcfcf; /* Gris légèrement plus foncé pour les derniers éléments */
+            }
+
+            /* Si besoin, ajuster les titres aussi */
+            .card-title {
+                color: #f5f5f5; /* Une couleur douce mais lisible */
+                font-weight: bold; /* Accentue pour une meilleure lisibilité */
+            }
+        </style>
+    </head>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <body>
+        <!-- Titre principal -->
+        
+        <h2>Mes projets récents</h2>
+
+         
+    <!-- Filtre -->
+    <div class="mb-3">
+        <label for="filter-tech" class="form-label">Filtrer par technologie :</label>
+        <select id="filter-tech" class="form-select">
+          <option value="">Toutes les technologies</option>
+        </select>
+      </div>
+      
+    
+        <!-- Section des projets -->
+        <div id="project-container" class="row"></div>
+        
+        
+        </div>
+
+    
+        <!-- Footer -->
+        <footer class="bg-dark text-white text-center py-3">
+            <div class="container">
+                <p class="mb-1">© 2025 Mona Pintacorona</p>
+                <p>
+                    <a href="contact.html" class="text-decoration-none text-white me-3">
+                        <i class="bi bi-envelope"></i> Contact
+                    </a>
+                    <a href="https://github.com/monaa179" class="text-decoration-none text-white">
+                        <i class="bi bi-github"></i> GitHub
+                    </a>
+                </p>
+            </div>
+        </footer>
+    </body>
+    </html>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+  // Projets avec images et URLs
+  const projects = {
+    "explorateur-films": {
+      title: "Explorateur de films",
+      description: "Application mobile pour explorer des films.",
+      tech: "React Native, API TMDB",
+      image: "images1/projet1.png",
+      url: "projet-detail.html?projet=explorateur-films"
+    },
+    "gestionnaire-taches": {
+      title: "Gestionnaire de tâches",
+      description: "Outil pour gérer des tâches d'équipe.",
+      tech: "NestJS, Next.js",
+      image: "images1/projet2.png",
+      url: "projet-detail.html?projet=gestionnaire-taches"
+    },
+    "planification-interventions": {
+      title: "Planification d'interventions",
+      description: "Optimisation des interventions techniques.",
+      tech: "React, NestJS, SQL",
+      image: "images1/projet3.png",
+      url: "projet-detail.html?projet=planification-interventions"
+    },
+    "jeu-vr": {
+      title: "Jeu en réalité virtuelle",
+      description: "Expérience immersive en VR.",
+      tech: "Unreal Engine 5, Android Studio, Meta Quest 3",
+      image: "images/projet3.png",
+      url: "projet-detail.html?projet=jeu-vr"
+    },
+    "antique-cards": {
+      title: "Antique Cards Clash",
+      description: "Refonte complète d'un jeu de cartes.",
+      tech: "C#",
+      image: "images1/projet5.png",
+      url: "projet-detail.html?projet=antique-cards"
+    },
+    "site-ecommerce": {
+      title: "Site E-commerce",
+      description: "Développement piloté par les tests pour un site E-commerce.",
+      tech: "React, Node.js, TDD",
+      image: "images1/projet6.png",
+      url: "projet-detail.html?projet=site-ecommerce"
+    },
+    "calculatrice-web": {
+      title: "Calculatrice Web",
+      description: "Calculatrice fonctionnelle pour le web.",
+      tech: "HTML, CSS, JavaScript",
+      image: "images1/projet7.png",
+      url: "projet-detail.html?projet=calculatrice-web"
+    },
+   "diffusion-audio": {
+            title: "Diffusion de messages audio intelligents",
+            description: "Solution technologique exploitant Microsoft Azure pour analyser des images, détecter le non-respect de la distanciation et déclencher des alertes audio.",
+            tech: "SDK/API Azure, Python, HTML",
+            image: "images1/projet8.png",
+            url: "projet-detail.html?projet=diffusion-audio"
+        },
+        "generateur-mdp": {
+            title: "Générateur de mots de passe",
+            description: "Application permettant de générer des mots de passe sécurisés en fonction des critères sélectionnés.",
+            tech: "JavaScript, HTML, CSS",
+            image: "images1/projet9.png",
+            url: "projet-detail.html?projet=generateur-mdp"
+        },
+        "juste-prix": {
+            title: "Jeu du Juste Prix",
+            description: "Développement d’un jeu où l’utilisateur doit deviner un prix en un nombre limité de tentatives.",
+            tech: "Python",
+            image: "images1/projet10.png",
+            url: "projet-detail.html?projet=juste-prix"
+        },
+        "pierre-feuille-ciseaux": {
+            title: "Jeu Pierre-Feuille-Ciseaux",
+            description: "Implémentation d’un jeu interactif et jouable dans un navigateur.",
+            tech: "JavaScript, HTML, CSS",
+            image: "images1/projet11.png",
+            url: "projet-detail.html?projet=pierre-feuille-ciseaux"
+        },
+        "hyrule-castle": {
+            title: "RPG Hyrule Castle",
+            description: "Jeu en tour par tour avec un héros affrontant des gobelins et un boss final.",
+            tech: "Golang",
+            image: "images1/projet12.pdf",
+            url: "projet-detail.html?projet=hyrule-castle"
+        },
+        "station-meteo": {
+            title: "Station météo interactive",
+            description: "Création d’une station météo interactive avec Arduino, utilisant des composants électroniques pour afficher la température en temps réel.",
+            tech: "Arduino",
+            image: "images1/projet13.png",
+            url: "projet-detail.html?projet=station-meteo"
+        },
+        "avis-recherche": {
+            title: "Générateur d’avis de recherche",
+            description: "Génération de fichiers PDF d’avis de recherche avec différents modes.",
+            tech: "Golang",
+            image: "images1/projet14.png",
+            url: "projet-detail.html?projet=avis-recherche"
+        },
+        "algorithmes-tri": {
+            title: "13 algorithmes de tri",
+            description: "Implémentation et comparaison de 13 algorithmes de tri avec analyse des performances.",
+            tech: "Python",
+            image: "images1/projet15.png",
+            url: "projet-detail.html?projet=algorithmes-tri"
+        },
+        "documentation-protocolaire": {
+            title: "Documentation protocolaire",
+            description: "Développement d’une API CRUD utilisateur avec une documentation complète.",
+            tech: "Node.js, SQL",
+            image: "images1/projet16.png",
+            url: "projet-detail.html?projet=documentation-protocolaire"
+        }
+    
+    
+    // Ajoutez d'autres projets ici
+  };
+
+  // Fonction pour afficher les projets
+  function displayProjects(filteredProjects) {
+    const projectContainer = document.getElementById('project-container');
+    projectContainer.innerHTML = ''; // Vider le conteneur avant de l'injecter
+
+    Object.keys(filteredProjects).forEach((key) => {
+      const project = filteredProjects[key];
+      const projectCard = `
+        <div class="col-md-4 mb-3">
+          <div class="card" onclick="window.location.href='${project.url}'">
+            <img src="${project.image}" alt="${project.title}" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">${project.title}</h5>
+              <p class="card-text">${project.description}</p>
+              <p class="card-text"><strong>Technologies :</strong> ${project.tech}</p>
+            </div>
+          </div>
+        </div>
+      `;
+      projectContainer.innerHTML += projectCard;
     });
-</script>
+  }
+
+  // Fonction pour configurer les options du filtre
+  function setupFilters() {
+    const filterTech = document.getElementById('filter-tech');
+    const techSet = new Set();
+
+    // Ajouter toutes les technologies uniques dans un Set
+    Object.values(projects).forEach((project) => {
+      project.tech.split(', ').forEach((tech) => techSet.add(tech));
+    });
+
+    // Ajouter chaque technologie dans le menu déroulant
+    techSet.forEach((tech) => {
+      const option = document.createElement('option');
+      option.value = tech;
+      option.textContent = tech;
+      filterTech.appendChild(option);
+    });
+
+    // Filtrer les projets lorsque la technologie est sélectionnée
+    filterTech.addEventListener('change', () => {
+      const selectedTech = filterTech.value;
+      if (selectedTech === '') {
+        displayProjects(projects); // Afficher tous les projets si aucun filtre n'est sélectionné
+      } else {
+        const filteredProjects = Object.fromEntries(
+          Object.entries(projects).filter(([key, project]) =>
+            project.tech.includes(selectedTech)
+          )
+        );
+        displayProjects(filteredProjects);
+      }
+    });
+  }
+
+  // Initialisation de l'affichage et des filtres
+  displayProjects(projects); // Afficher tous les projets par défaut
+  setupFilters(); // Configurer les options du filtre
+});
+        </script>
 </body>
 </html>
