@@ -181,25 +181,64 @@ body {
     animation: fadeIn 2s ease-in-out;
 }
 
-
-/* Navbar */
-.offcanvas {
-    width: 250px; /* Largeur du menu */
-}
-.navbar-toggler {
-    border: none;
-    outline: none;
-}
-.navbar-toggler:focus {
-    box-shadow: none;
-}
+/* Style pour la navbar */
 .navbar {
-    transition: background-color 0.3s ease-in-out, backdrop-filter 0.3s;
-    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
-.navbar.scrolled {
-    background-color: rgba(0, 0, 0, 0.85) !important;
+
+/* Change la couleur de fond et ajoute une ombre lorsqu'on survole la navbar */
+.navbar:hover {
+    background-color: #333 !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5) !important;
 }
+
+/* Effet de transition fluide pour les liens de la navbar */
+.navbar-nav .nav-link {
+    position: relative;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgb(0, 188, 212); /* Couleur dynamique au survol */
+}
+
+/* Effet d'animation pour le menu off-canvas */
+.offcanvas {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.offcanvas.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.offcanvas-header {
+    background-color: #444;
+    color: white;
+}
+
+.offcanvas-body {
+    background-color: #222;
+}
+
+/* Animation de l'icône hamburger */
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D"http%3A//www.w3.org/2000/svg"%20viewBox%3D"0%200%2024%2024"%3E%3Cpath%20d%3D"M3%205h18c.553%200%201%20.447%201%201s-.447%201-1%201H3c-.553%200-1-.447-1-1s.447-1%201-1zm0%206h18c.553%200%201%20.447%201%201s-.447%201-1%201H3c-.553%200-1-.447-1-1s.447-1%201-1zm0%206h18c.553%200%201%20.447%201%201s-.447%201-1%201H3c-.553%200-1-.447-1-1s.447-1%201-1z"%3E%3C/path%3E%3C/svg%3E');
+}
+
+/* Animations sur le menu off-canvas */
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 
 /* Animation au survol des cartes */
 .card {
@@ -385,8 +424,8 @@ body {
 /* ====== SECTION CONTACT ====== */
 #contact {
     padding-top: 80px;
-    background: linear-gradient(135deg, #f8f9fa, #eaeaea); /* Gris clair et beige */
-    color: #333;
+    background: linear-gradient( #282829); 
+    color: #d5caca;
     border-radius: 15px;
     padding: 60px 20px;
     margin-top: 50px;
@@ -398,7 +437,7 @@ body {
     font-size: 2.5rem;
     margin-bottom: 20px;
     position: relative;
-    color: #2c3e50; /* Gris foncé élégant */
+    color: #d3dedc; /* Gris foncé élégant */
 }
 
 #contact h2::after {
@@ -807,4 +846,197 @@ form:hover {
 
 .skill-card:hover:before {
     opacity: 0.7; /* Lumière plus douce */
+}
+
+/* Fond de la page */
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(180deg, #1c1c1c, #121212) !important; /* Forcer le fond sombre */
+    color: #007bff#fff !important; /* Forcer le texte en blanc */
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+
+/* Sections */
+section {
+    width: 100% !important;
+    padding: 50px 0 !important; /* Espacement vertical pour éviter que les sections collent */
+}
+
+/* Conteneur de la carte */
+.skill-card {
+    position: relative !important;
+    background-color: rgb(63, 60, 60) !important; /* Fond clair */
+    color: black !important; /* Texte noir */
+    border: 1px solid rgb(94, 93, 93) !important; /* Bordure rouge */
+    border-radius: 12px !important; /* Coins arrondis */
+    padding: 10px !important; /* Padding réduit */
+    width: 150px !important; /* Largeur de la carte */
+    height: auto !important; /* Hauteur automatique */
+    text-align: center !important; /* Centrer le texte */
+    opacity: 1 !important; /* Opacité normale */
+    visibility: visible !important; /* Assurer la visibilité */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5) !important; /* Ombre douce */
+    overflow: hidden !important; /* Empêche le contenu de dépasser */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out !important; /* Transition pour l'effet hover */
+}
+
+/* Effet lampe torche */
+.skill-card:before {
+    content: '' !important;
+    position: absolute !important;
+    top: var(--mouse-y, -9999px) !important;
+    left: var(--mouse-x, -9999px) !important;
+    width: 100px !important;
+    height: 00px !important;
+    background: radial-gradient(circle, rgb(77, 75, 75) 0%, rgba(255, 255, 255, 0) 70%) !important;
+    border-radius: 50% !important;
+    pointer-events: none !important;
+    transform: translate(-50%, -50%) !important;
+    opacity: 0 !important;
+    transition: opacity 0.3s ease-in-out !important;
+    box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.5) !important; /* Lumière douce */
+}
+
+/* Lorsque la souris est sur la carte */
+.skill-card:hover:before {
+    opacity: 1 !important;
+}
+.github-card img {
+    filter: brightness(0) invert(1) !important; /* Rend uniquement l'icône GitHub blanche */
+}
+.skill-container {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 20px !important;
+    justify-content: center !important;
+    margin-top: 30px !important;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a; /* Fond sombre moderne */
+    color: #e0e0e0; /* Texte gris clair pour un contraste doux */
+    padding: 40px 0; /* Espacement vertical plus ajusté */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    position: relative;
+}
+
+/* Titre du footer */
+footer .footer-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+
+/* Animation de l'apparition du titre */
+footer .footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 50px;
+    height: 2px;
+    background-color: #16a085; /* Accent moderne de couleur */
+    border-radius: 2px;
+}
+
+/* Liens du footer */
+footer .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Style des liens */
+footer .footer-link {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
+}
+
+/* Effet de survol sur les liens */
+footer .footer-link:hover {
+    background-color: #16a085; /* Fond rouge moderne au survol */
+    color: #fff; /* Texte blanc sur fond rouge */
+    transform: scale(1.05); /* Légère animation d'agrandissement */
+}
+
+/* Icônes au survol */
+footer .footer-link i {
+    font-size: 1.4rem;
+    transition: transform 0.3s ease;
+}
+
+/* Effet de rotation des icônes */
+footer .footer-link:hover i {
+    transform: rotate(15deg);
+}
+
+/* Copyright */
+footer .footer-copy {
+    font-size: 0.9rem;
+    color: #bbb;
+    font-weight: 300;
+    margin-top: 30px;
+}
+
+footer .footer-copy a {
+    color: #16a085; /* Accent rouge pour les liens */
+    text-decoration: none;
+}
+
+footer .footer-copy a:hover {
+    color: #fff;
+}
+
+/* btn download
+/* Style pour le bouton de téléchargement */
+.download-btn {
+    display: inline-block; /* Permet au bouton de se comporter comme un élément en ligne */
+    padding: 12px 30px; /* Espacement intérieur du bouton */
+    font-size: 16px; /* Taille du texte */
+    font-weight: bold; /* Met en gras le texte */
+    text-align: center; /* Centre le texte */
+    text-decoration: none; /* Retire le soulignement */
+    border-radius: 50px; /* Coins arrondis */
+    background-color: #007bff; /* Couleur de fond bleue */
+    color: white; /* Couleur du texte */
+    transition: all 0.3s ease; /* Effet de transition pour l'animation */
+}
+
+.download-btn:hover {
+    background-color: #0056b3; /* Changement de couleur au survol */
+    transform: scale(1.05); /* Agrandir légèrement le bouton lors du survol */
+}
+
+.download-btn:focus {
+    outline: none; /* Retire le contour du bouton lorsqu'il est cliqué */
+}
+
+.download-btn-container {
+    display: flex; /* Utilise Flexbox */
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement */
+    height: 100%; /* Prend toute la hauteur disponible */
+    margin-top: 20px; /* Espace au-dessus du bouton */
 }
