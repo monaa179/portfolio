@@ -1040,3 +1040,52 @@ footer .footer-copy a:hover {
     height: 100%; /* Prend toute la hauteur disponible */
     margin-top: 20px; /* Espace au-dessus du bouton */
 }
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Décalage léger vers le haut */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Ombre pour l'effet de profondeur */
+}
+
+/* Sur mobile, on peut garder un effet simple */
+@media (max-width: 767px) {
+    .card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+.scroll-down-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    animation: bounce 2s infinite; /* Animation de rebond */
+    pointer-events: none;
+}
+
+.scroll-down-arrow {
+    font-size: 30px;
+    display: block;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Effet de transition sur mobile */
+@media (max-width: 767px) {
+    .scroll-down-container {
+        font-size: 16px;
+    }
+}
+

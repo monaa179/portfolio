@@ -42,7 +42,7 @@
 <header  id="home" class="hero-section text-center text-white d-flex align-items-center" style="background: #333; height: 80vh;">
     <div class="container">
         <h1>Portfolio</h1>
-        <p class="lead">Développeuse junior | En recherche d'alternnace</p>
+        <p class="lead">Développeuse junior | En recherche d'alternance</p>
         <p>Étudiante en informatique, je suis activement à la recherche d’une alternance pour septembre 2025. Passionnée par le web, la cybersécurité et l’IA, je veux relever des défis.</p>
         
         <!-- Logos for GitHub and LinkedIn -->
@@ -200,6 +200,7 @@
         </select>
       </div>
       
+
     
         <!-- Section des projets -->
         <div id="project-container" class="row"></div>
@@ -275,6 +276,8 @@
                 </div>
             </div>
         </section>
+
+
 
         <p class="mt-4 text-center">
             <button class="download-btn" onclick="window.location.href='cv/CvPortfolio.pdf';" download="Mona_Pintacorona_CV">
@@ -581,6 +584,21 @@ document.getElementById("contactForm").addEventListener("submit", function(event
             alert("Une erreur s'est produite.");
         });
     });
+
+    document.addEventListener('DOMContentLoaded', () => {
+  const projects = document.querySelectorAll('.card');
+  const fadeInOnScroll = () => {
+    projects.forEach((project) => {
+      const rect = project.getBoundingClientRect();
+      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+        project.classList.add('fade-in');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', fadeInOnScroll);
+  fadeInOnScroll(); // Vérifier dès le début au cas où les projets sont déjà dans le viewport
+});
         </script>
 </body>
 </html>
