@@ -213,6 +213,9 @@
         <!-- Section des projets -->
         <div id="project-container" class="row"></div>
         
+        <div class="text-center mt-4">
+            <button id="show-more-btn" class="btn btn-primary d-block mx-auto">Voir plus</button>
+          </div>
         
         </div>
         <section id="competences" class="container py-5 text-center">
@@ -476,29 +479,55 @@
     
     // Ajoutez d'autres projets ici
   };
+  
+  const INITIAL_DISPLAY_COUNT = 3;
+  let showingAll = false;
+
+  const showMoreBtn = document.getElementById('show-more-btn');
+
+showMoreBtn.addEventListener('click', () => {
+  showingAll = !showingAll;
+  displayProjects(projects, showingAll);
+});
+  const projectContainer = document.getElementById('project-container');
+  
 
   // Fonction pour afficher les projets
-  function displayProjects(filteredProjects) {
-    const projectContainer = document.getElementById('project-container');
-    projectContainer.innerHTML = ''; // Vider le conteneur avant de l'injecter
+  function displayProjects(filteredProjects, showAll = false) {
+  const projectContainer = document.getElementById('project-container');
+  projectContainer.innerHTML = '';
 
-    Object.keys(filteredProjects).forEach((key) => {
-      const project = filteredProjects[key];
-      const projectCard = `
-        <div class="col-md-4 mb-3">
-          <div class="card" onclick="window.location.href='${project.url}'">
-            <img src="${project.image}" alt="${project.title}" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">${project.title}</h5>
-              <p class="card-text">${project.description}</p>
-              <p class="card-text"><strong>Technologies :</strong> ${project.tech}</p>
-            </div>
+  const projectKeys = Object.keys(filteredProjects);
+  const keysToDisplay = showAll ? projectKeys : projectKeys.slice(0, INITIAL_DISPLAY_COUNT);
+
+  keysToDisplay.forEach((key) => {
+    const project = filteredProjects[key];
+    const projectCard = `
+      <div class="col-md-4 mb-3">
+        <div class="card" onclick="window.location.href='${project.url}'">
+          <img src="${project.image}" alt="${project.title}" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">${project.title}</h5>
+            <p class="card-text">${project.description}</p>
+            <p class="card-text"><strong>Technologies :</strong> ${project.tech}</p>
           </div>
         </div>
-      `;
-      projectContainer.innerHTML += projectCard;
-    });
+      </div>
+    `;
+    projectContainer.innerHTML += projectCard;
+  });
+
+  // Afficher ou cacher le bouton selon s’il y a plus que 3 projets
+  const showMoreBtn = document.getElementById('show-more-btn');
+  if (projectKeys.length <= INITIAL_DISPLAY_COUNT) {
+    showMoreBtn.style.display = 'none';
+  } else {
+    showMoreBtn.style.display = 'block';
+    showMoreBtn.textContent = showAll ? 'Voir moins' : 'Voir plus';
   }
+}
+
+  
 
   // Fonction pour configurer les options du filtre
   function setupFilters() {
@@ -522,7 +551,7 @@
     filterTech.addEventListener('change', () => {
       const selectedTech = filterTech.value;
       if (selectedTech === '') {
-        displayProjects(projects); // Afficher tous les projets si aucun filtre n'est sélectionné
+        displayProjects(projects, false); // Afficher tous les projets si aucun filtre n'est sélectionné
       } else {
         const filteredProjects = Object.fromEntries(
           Object.entries(projects).filter(([key, project]) =>
@@ -535,7 +564,7 @@
   }
 
   // Initialisation de l'affichage et des filtres
-  displayProjects(projects); // Afficher tous les projets par défaut
+  displayProjects(projects, false); // Afficher tous les projets par défaut
   setupFilters(); // Configurer les options du filtre
 });
 
@@ -607,6 +636,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
   window.addEventListener('scroll', fadeInOnScroll);
   fadeInOnScroll(); // Vérifier dès le début au cas où les projets sont déjà dans le viewport
 });
-        </script>
+
+</script>
 </body>
 </html>

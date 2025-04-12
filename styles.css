@@ -1088,3 +1088,8 @@ footer .footer-copy a:hover {
         font-size: 16px;
     }
 }
+
+#show-more-btn {
+    margin-top: 20px;
+    /* autres styles personnalisés */
+  }
