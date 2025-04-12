@@ -637,6 +637,20 @@ document.getElementById("contactForm").addEventListener("submit", function(event
   fadeInOnScroll(); // Vérifier dès le début au cas où les projets sont déjà dans le viewport
 });
 
+const fadeElements = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+});
+
+fadeElements.forEach(element => {
+    observer.observe(element);
+});
+
 </script>
 </body>
 </html>

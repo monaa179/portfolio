@@ -1093,3 +1093,12 @@ footer .footer-copy a:hover {
     margin-top: 20px;
     /* autres styles personnalisés */
   }
+
+  .fade-in {
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
